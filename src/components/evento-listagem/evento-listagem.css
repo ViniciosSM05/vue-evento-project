@@ -1,0 +1,30 @@
+.evento-listagem {
+  font-size: 1.2rem;
+}
+
+.evento-listagem table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.evento-listagem table tr {
+  height: 40px;
+  border-bottom: 1pt solid #ccc;
+}
+
+.evento-listagem table tr th {
+  vertical-align: bottom;
+  font-weight: 700;
+}
+
+.evento-listagem table tr th,
+.evento-listagem table tr td {
+  padding: 5px 10px;
+  width: 20%;
+  text-align: center;
+}
+
+.evento-listagem a {
+  cursor: pointer;
+}

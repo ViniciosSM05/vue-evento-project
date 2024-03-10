@@ -1,0 +1,16 @@
+.listagem-eventos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.listagem-eventos .content {
+  width: 90vw;
+}
+
+.listagem-eventos .content .title h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}

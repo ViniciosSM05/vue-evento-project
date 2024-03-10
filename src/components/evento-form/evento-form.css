@@ -1,0 +1,36 @@
+.evento-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.evento-form .col {
+  display: flex;
+  flex-direction: column;
+}
+
+.evento-form input {
+  padding: 8px 5px;
+}
+
+.evento-form button {
+  padding: 8px 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 5%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: #fff;
+  font-weight: 700;
+  transition: 0.1s;
+  border-radius: 5px;
+  border: none;
+}
+
+.evento-form button:hover {
+  opacity: 0.9;
+}
