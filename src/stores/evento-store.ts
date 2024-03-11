@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { ref, nextTick } from 'vue'
+import { ref } from 'vue'
 import type { Evento } from '@/types/evento/Evento'
 import type { Uf } from '@/types/uf/Uf'
 import type { Municipio } from '@/types/municipio/Municipio'
@@ -34,8 +34,11 @@ export const useEventoStore = defineStore('evento', () => {
     })
   }
 
+  const eventoIsValid = (evento: Evento) =>
+    evento && evento.nome && evento.uf && evento.municipio && evento.data
+
   const salvar = () => {
-    if (!!eventoToAdd.value.id)
+    if (eventoToAdd.value.id)
       eventos.value = eventos.value.map((x) => ({
         ...(x.id === eventoToAdd.value.id ? eventoToAdd.value : x)
       }))
@@ -63,6 +66,7 @@ export const useEventoStore = defineStore('evento', () => {
     setEventoPreco,
     setEventoData,
     clearEventoToAdd,
+    eventoIsValid,
     salvar,
     excluir
   }

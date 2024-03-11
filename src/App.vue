@@ -11,10 +11,15 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
   </header>
-
-  <RouterView />
+  <main class="content">
+    <RouterView />
+  </main>
 </template>
 <style scoped>
+header {
+  height: 10vh;
+}
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -27,5 +32,10 @@ a {
   text-decoration: none;
   font-weight: 700;
   font-style: italic;
+  color: #000;
+}
+
+.content {
+  height: 90vh;
 }
 </style>

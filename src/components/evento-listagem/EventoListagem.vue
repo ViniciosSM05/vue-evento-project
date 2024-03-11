@@ -1,6 +1,6 @@
 <template>
   <div class="evento-listagem">
-    <table>
+    <table v-if="store.eventos.length">
       <thead>
         <tr>
           <th>Nome</th>
@@ -18,7 +18,7 @@
           <td>{{ evento.uf?.nome }}</td>
           <td>{{ evento.municipio?.nome }}</td>
           <td>R$ {{ evento.preco }}</td>
-          <td>{{ evento.data }}</td>
+          <td>{{ evento.data ? moment(evento.data).format('DD/MM/YYYY [às] HH:mm:ss') : '' }}</td>
           <td>
             <a @click="editar(evento)">
               <img src="@/assets/icons/edit.png" height="20" width="20" />
@@ -32,14 +32,18 @@
         </tr>
       </tbody>
     </table>
+    <div v-else class="sem-dados">
+      <h3>Não há eventos cadastrados!</h3>
+    </div>
   </div>
 </template>
 <style scoped src="./evento-listagem.css"></style>
 
 <script setup lang="ts">
 import { useEventoStore } from '@/stores/evento-store'
-import type { Evento } from '@/types/evento/Evento'
 import { useRouter } from 'vue-router'
+import type { Evento } from '@/types/evento/Evento'
+import moment from 'moment'
 
 const router = useRouter()
 const store = useEventoStore()

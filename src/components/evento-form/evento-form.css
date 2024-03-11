@@ -4,6 +4,10 @@
   gap: 16px;
 }
 
+.evento-form form label {
+  font-weight: 600;
+}
+
 .evento-form .col {
   display: flex;
   flex-direction: column;
@@ -17,11 +21,11 @@
   padding: 8px 5px;
   cursor: pointer;
   text-transform: uppercase;
-  background: rgb(2, 0, 36);
+  background: rgb(13, 8, 116);
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 5%,
+    rgb(13, 7, 122) 0%,
+    rgb(16, 16, 160) 5%,
     rgba(0, 212, 255, 1) 100%
   );
   color: #fff;

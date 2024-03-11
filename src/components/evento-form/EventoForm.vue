@@ -4,6 +4,7 @@
       <div class="col col-nome">
         <label for="nome">Nome:</label>
         <input
+          required
           type="text"
           name="nome"
           :value="store.eventoToAdd.nome"
@@ -28,6 +29,7 @@
       <div class="col col-preco">
         <label for="nome">Preço do ingresso:</label>
         <input
+          required
           type="number"
           name="preco"
           :value="store.eventoToAdd.preco"
@@ -46,7 +48,7 @@
       </div>
 
       <div class="col col-btn">
-        <button type="button" @click="salvar">Salvar</button>
+        <button type="submit" @click="salvar">Salvar</button>
       </div>
     </form>
   </div>
@@ -63,6 +65,10 @@ const router = useRouter()
 const store = useEventoStore()
 
 const salvar = () => {
+  if (!store.eventoIsValid(store.eventoToAdd)) {
+    alert('Preencha todos os campos corretamente')
+    return
+  }
   store.salvar()
   router.push('/')
 }

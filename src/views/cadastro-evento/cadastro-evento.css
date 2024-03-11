@@ -3,8 +3,18 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
 }
 
 .cadastro-evento .container-form {
   width: 50vw;
+  padding: 20px 30px;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 0 10px #719ece;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.cadastro-evento .container-form .title {
+  text-align: center;
 }

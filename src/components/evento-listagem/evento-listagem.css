@@ -28,3 +28,9 @@
 .evento-listagem a {
   cursor: pointer;
 }
+
+.evento-listagem .sem-dados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
